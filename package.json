@@ -1,0 +1,50 @@
+{
+  "name": "linetidy",
+  "version": "0.1.0",
+  "description": "Normalize messy supplier linesheets into clean, validated inventory data. Deterministic by default, optional AI column mapping.",
+  "type": "module",
+  "bin": {
+    "linetidy": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "csv",
+    "inventory",
+    "linesheet",
+    "normalize",
+    "data-cleaning",
+    "cli",
+    "ai"
+  ],
+  "author": "Gabriel Murray",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "csv-stringify": "^6.5.0",
+    "zod": "^3.23.8"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.32.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}
